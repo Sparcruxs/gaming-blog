@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World of Warcraft</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding-bottom: 60px;
+            margin: 0; /* Remove default margin to fix spacing */
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+            transform: scale(1.1);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px 10px; /* Add horizontal padding for better alignment */
+        }
+
+        img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .main-img {
+            width: auto;
+            max-width: 100%;
+            height: 500px;
+            /* Set a fixed height */
+            border-radius: 10px;
+            margin: 20px 0;
+            object-fit: cover;
+            /* Ensure the image maintains its aspect ratio */
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            border: none;
+            background: #ff4757;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background: #e84118;
+        }
+
+        .buy-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #ff4757;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .buy-btn:hover {
+            background: #e84118;
+        }
+
+        .features {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .features h3 {
+            margin-bottom: 10px;
+        }
+
+        .features ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .features ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+            height: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            justify-content: center; /* Center content vertically */
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>World of Warcraft</h1>
+        <img src="wow.jpg" alt="World of Warcraft">
+        <p>World of Warcraft (WoW) is a massively multiplayer online role-playing game (MMORPG) developed and published
+            by Blizzard Entertainment.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/vlVSJ0AvZe0?si=uLSm7N6VAr6y80JA"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <br>
+        
+        <!-- New Features Section -->
+        <div class="features">
+            <h3>Key Features:</h3>
+            <ul>
+                <li>Expansive open world with diverse environments</li>
+                <li>Engaging story with complex characters</li>
+                <li>Realistic graphics and immersive gameplay</li>
+                <li>Variety of missions and side activities</li>
+                <li>Online multiplayer mode with regular updates</li>
+            </ul>
+        </div>
+
+        <a href="https://worldofwarcraft.com/en-us/" class="buy-btn" target="_blank">Buy Now</a>
+    </div>
+    <footer>
+        
+        <p>&copy; 2025 GamingHorizon. All rights reserved.</p>
+        <p>Йордан Капитански</p>
+    </footer>
+</body>
+
+</html>

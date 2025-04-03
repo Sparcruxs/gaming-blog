@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <link rel="icon" type="image/png" href="images3.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMORPG Games</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            background-color: #1e1e1e;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+            transform: scale(1.1);
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 36px;
+            color: #ff4500;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 50px;
+            flex-grow: 1;
+        }
+
+        .game-card {
+            background: #2c2c2c;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 400px; 
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .game-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .game-card img {
+            width: 100%;
+            height: 210px; 
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .game-card button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            border: none;
+            background: #ff4757;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .game-card button:hover {
+            background: #e84118;
+        }
+
+        .heart {
+            font-size: 24px;
+            cursor: pointer;
+            color: gray;
+            transition: color 0.3s;
+            display: block;
+            margin: 10px auto 0;
+        }
+
+        .liked {
+            color: red;
+        }
+
+        .like-counter {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .comment-section {
+            margin-top: 50px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            background: #2c2c2c;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            flex-grow: 1;
+        }
+
+        .comment-section h2 {
+            font-size: 24px;
+            color: #ff4500;
+        }
+
+        .comment-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .comment-section input,
+        .comment-section textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #1e1e1e;
+            color: white;
+            margin-left: -10px; /* Move slightly to the left */
+        }
+
+        .comment-section button {
+            width: 100px;
+            padding: 10px;
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .comment-section button:hover {
+            background-color: #e03e00;
+        }
+
+        .comment {
+            background: #444;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .delete-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .game-card,
+        .comment-section {
+            animation: fadeIn 1s ease-in-out;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: auto;
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="Начало.html">Home</a>
+        <a href="fps.html">FPS</a>
+        <a href="adventure.html">Adventure</a>
+        <a href="mmorpg.html">MMORPG</a>
+    </div>
+    <h1>MMORPG Games</h1>
+    <div class="container">
+        <div class="game-card">
+            <img src="wow.jpg" alt="World of Warcraft">
+            <p>World of Warcraft</p>
+            <button onclick="window.location.href='wowinfo.html'">More Info</button>
+            <span class="heart" onclick="toggleLike(this, 0)">&#10084;</span>
+            <p class="like-counter">Likes: <span>0</span></p>
+        </div>
+        <div class="game-card">
+            <img src="finalfantasy .jpg" alt="Final Fantasy XIV">
+            <p>Final Fantasy XIV</p>
+            <button onclick="window.location.href='ffxivinfo.html'">More Info</button>
+            <span class="heart" onclick="toggleLike(this, 1)">&#10084;</span>
+            <p class="like-counter">Likes: <span>0</span></p>
+        </div>
+        <div class="game-card">
+            <img src="wars.jpg" alt="Guild Wars 2">
+            <p>Guild Wars 2</p>
+            <button onclick="window.location.href='gw2info.html'">More Info</button>
+            <span class="heart" onclick="toggleLike(this, 2)">&#10084;</span>
+            <p class="like-counter">Likes: <span>0</span></p>
+        </div>
+        <div class="game-card">
+            <img src="scroll.avif" alt="The Elder Scrolls Online">
+            <p>The Elder Scrolls Online</p>
+            <button onclick="window.location.href='esoinfo.html'">More Info</button>
+            <span class="heart" onclick="toggleLike(this, 3)">&#10084;</span>
+            <p class="like-counter">Likes: <span>0</span></p>
+        </div>
+    </div>
+
+    <div class="comment-section">
+        <h2>Comments</h2>
+        <form id="commentForm">
+            <input type="text" id="username" placeholder="Your name" required>
+            <textarea id="comment" rows="4" placeholder="Your comment" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="commentsContainer"></div>
+    </div>
+    <footer>
+       
+        <p>&copy; 2025 GamingHorizon. All rights reserved.</p>
+        <p>Йордан Капитански</p>
+    </footer>
+    <script>
+        function toggleLike(element, gameId) {
+            let likes = JSON.parse(localStorage.getItem('mmorpgLikes')) || {};
+            let counter = element.nextElementSibling.querySelector("span");
+            let count = likes[gameId] || 0;
+
+            if (element.classList.contains("liked")) {
+                element.classList.remove("liked");
+                count--;
+            } else {
+                element.classList.add("liked");
+                count++;
+            }
+
+            likes[gameId] = count;
+            localStorage.setItem('mmorpgLikes', JSON.stringify(likes));
+            counter.textContent = count;
+        }
+
+        function loadLikes() {
+            let likes = JSON.parse(localStorage.getItem('mmorpgLikes')) || {};
+            document.querySelectorAll('.game-card').forEach((card, index) => {
+                let heart = card.querySelector('.heart');
+                let counter = card.querySelector('.like-counter span');
+                let count = likes[index] || 0;
+
+                counter.textContent = count;
+                if (count > 0) {
+                    heart.classList.add("liked");
+                }
+            });
+        }
+
+        document.getElementById('commentForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const comment = document.getElementById('comment').value;
+
+            if (username && comment) {
+                const commentContainer = document.createElement('div');
+                commentContainer.classList.add('comment');
+                commentContainer.innerHTML = `<strong>${username}</strong><p>${comment}</p><button class="delete-btn" onclick="deleteComment(this)">Delete</button>`;
+                document.getElementById('commentsContainer').appendChild(commentContainer);
+
+                // Save comment to localStorage
+                saveComment(username, comment);
+
+                document.getElementById('username').value = '';
+                document.getElementById('comment').value = '';
+            }
+        });
+
+        function saveComment(username, comment) {
+            let comments = JSON.parse(localStorage.getItem('mmorpgComments')) || [];
+            comments.push({ username, comment });
+            localStorage.setItem('mmorpgComments', JSON.stringify(comments));
+        }
+
+        function loadComments() {
+            let comments = JSON.parse(localStorage.getItem('mmorpgComments')) || [];
+            comments.forEach((comment, index) => {
+                const commentContainer = document.createElement('div');
+                commentContainer.classList.add('comment');
+                commentContainer.innerHTML = `<strong>${comment.username}</strong><p>${comment.comment}</strong><button class="delete-btn" onclick="deleteComment(this, ${index})">Delete</button>`;
+                document.getElementById('commentsContainer').appendChild(commentContainer);
+            });
+        }
+
+        function deleteComment(button, index) {
+            let comments = JSON.parse(localStorage.getItem('mmorpgComments')) || [];
+            comments.splice(index, 1);
+            localStorage.setItem('mmorpgComments', JSON.stringify(comments));
+            button.parentElement.remove();
+        }
+
+        // Load likes and comments when the page loads
+        window.onload = function () {
+            loadLikes();
+            loadComments();
+        };
+    </script>
+</body>
+
+</html>

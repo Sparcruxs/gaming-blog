@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гейминг Платформа</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+            transform: scale(1.1);
+        }
+
+        .background {
+            position: fixed;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 50px);
+            background: url('photo-1542751371-adc38448a05e.jpg') no-repeat center center/cover;
+            z-index: -1;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="navbar">
+        <a href="Начало.html">Home</a>
+        <a href="fps.html">FPS</a>
+        <a href="adventure.html">Adventure</a>
+        <a href="mmorpg.html">MMORPG</a>
+    </div>
+
+    <div class="background"></div>
+
+    <div class="container" id="content">
+        <div class="content">
+            <h2>Открий своята следваща любима игра!</h2>
+            <p>GamingHorizon e мястото където ще откриете най-добрите игри от различни жанрове! Тук ще намерите
+                препоръки за FPS, Shooter, MMORPG, Survival и други вълнуващи заглавия.</p>
+            <p>Всяка игра в нашия каталог идва със специална връзка, която ще ви отведе директно до доверени магазини,
+                където можете да я закупите. </p>
+            <p>По този начин не само намирате страхотни игри, но и подкрепяте нашия сайт,
+                тъй като получаваме малка комисионна от вашата покупка – без допълнителни разходи за вас!</p>
+            <p>Разгледайте, харесвайте и откривайте нови светове! 🎮</p>
+        </div>
+    </div>
+     <footer>
+        <p>&copy; 2025 GamingHorizon. All rights reserved.</p>
+        <p>Йордан Капитански</p>
+    </footer>
+</body>
+
+</html>
